@@ -39,7 +39,8 @@ const Reviews = () => {
       starRating: 5,
       comment: 'Impressed by the team\'s commitment to excellence. They understood our unique needs and delivered a solution that perfectly matches our requirements. A pleasure to work with!',
       avatarUrl: '/assets/avatars/avatar-5.png'
-    }
+    },
+    
   ];
 
   useEffect(() => {
