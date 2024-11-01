@@ -143,6 +143,7 @@ div.icon-wrapper svg {
     font-weight: 500;
     font-size: 14px;
     display: inline-flex;
+    
     align-items: center;
     gap: 4px;
 }
@@ -154,7 +155,9 @@ div.icon-wrapper svg {
 }
 
 .btn-text:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: #4547b0;
+    
 }
 
 
