@@ -5,10 +5,10 @@ import './styles/HowItWorks.css';
 
 const HowItWorks = () => {
   const steps = [
-    { image: 'src/assets/images/hw1.png', alt: 'Step 1', title: 'Step 1. Advanced budget management', description: 'Optimize your budget with advanced tools to track and manage your expenses effectively.' },
-    { image: 'src/assets/images/hw2.png', alt: 'Step 2', title: 'Step 2. Latest transaction history', description: 'Stay informed with real-time updates on your recent transactions and spending patterns.' },
-    { image: 'src/assets/images/hw3.png', alt: 'Step 3', title: 'Step 3. Transfers to people from your contact list', description: 'Easily transfer money to friends and family directly from your contact list. No extra fees or commissions.' },
-    { image: 'src/assets/images/hw7.png', alt: 'Step 4', title: 'Step 4. Secure online payments', description: 'Make secure online payments with confidence using our encrypted payment system.' },
+    { image: '/assets/images/hw1.png', alt: 'Step 1', title: 'Step 1. Advanced budget management', description: 'Optimize your budget with advanced tools to track and manage your expenses effectively.' },
+    { image: '/assets/images/hw2.png', alt: 'Step 2', title: 'Step 2. Latest transaction history', description: 'Stay informed with real-time updates on your recent transactions and spending patterns.' },
+    { image: '/assets/images/hw3.png', alt: 'Step 3', title: 'Step 3. Transfers to people from your contact list', description: 'Easily transfer money to friends and family directly from your contact list. No extra fees or commissions.' },
+    { image: '/assets/images/hw7.png', alt: 'Step 4', title: 'Step 4. Secure online payments', description: 'Make secure online payments with confidence using our encrypted payment system.' },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -48,7 +48,7 @@ const HowItWorks = () => {
           <button onClick={nextSlide} className="nav-button next">
             <FontAwesomeIcon icon={faChevronRight} className="chevron-icon" />
           </button>
-          <img src="src/assets/images/frame.png" alt="Phone Frame" className="phone-frame" />
+          <img src="/assets/images/frame.png" alt="Phone Frame" className="phone-frame" />
         </div>
         <div className="transaction-history">
           <h3 className="transaction-history-title">{steps[currentIndex].title}</h3>
