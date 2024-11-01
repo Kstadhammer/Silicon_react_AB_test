@@ -25,7 +25,7 @@ const Features = () => {
     {
       icon: '/assets/icons/wallet.svg',
       title: 'Regular Cashback',
-      description: 'Enjoy regular cashback rewards on your purchases.'
+      description: 'Enjoy regular cashback rewards on all of your purchases.'
     },
     {
       icon: '/assets/icons/happy.svg',
