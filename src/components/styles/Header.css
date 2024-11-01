@@ -1,0 +1,459 @@
+/* Header Styles */
+header {
+
+    width: 100%;
+    background-color: var(--color-background);
+    z-index: 1000;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 32px;
+    width: auto;
+}
+
+/* Navigation */
+.navbar {
+    flex: 1;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--color-gray800);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.nav-link:hover {
+    color: var(--color-primary);    
+    text-decoration: none;
+    background-color: var(--color-gray100-light);
+}
+
+.nav-link.active {
+    color: var(--color-primary);
+    background-color: var(--color-gray100-light);
+}
+
+/* Sign In Button */
+#auth-signin {
+    display: none;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+    align-items: center;
+    gap: 8px;
+}
+
+#auth-signin .signin-icon {
+    font-size: 14px;
+}
+
+#auth-signin:hover {
+    background-color: #4547b0;
+    text-decoration: none;
+    color: white;
+}
+
+/* Mobile Menu Button */
+.btn-mobile {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: var(--color-heading);
+    cursor: pointer;
+    display: block;
+    padding: 8px;
+}
+
+/* Toggle Switch */
+.btn-toggle-switch {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.dark-mode .btn-toggle-switch .label {
+    color: var(--color-gray700);
+}
+
+.btn-toggle-switch .label {
+    display: none;
+    color: var(--color-heading);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 25px;
+    margin: 0;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-switch input:checked + .slider {
+    background-color: var(--color-primary);
+}
+
+.toggle-switch input:checked + .slider:before {
+    transform: translateX(18px);
+    background-color: var(--color-white);
+}
+
+.toggle-switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-gray);
+    transition: all 0.2s;
+    border-radius: 35px;
+}
+
+.toggle-switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 2.5px;
+    background-color: var(--color-white);
+    transition: all 0.2s;
+    border-radius: 50%;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .btn-toggle-switch .label {
+        display: block;
+    }
+}
+
+@media (min-width: 1400px) {
+    .navbar {
+        display: block;
+    }
+
+    #auth-signin {
+        display: inline-flex;
+    }
+
+    .btn-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 1399px) {
+    header .container {
+        gap: 24px;
+    }
+
+    .navbar {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        height: 64px;
+    }
+
+    header .container {
+        gap: 16px;
+    }
+
+    .logo img {
+        height: 28px;
+    }
+    .auth-container {
+        display: none;
+    }
+    
+}
+
+
+/* body.dark-mode header {
+    background-color: rgba(18, 18, 18, 0.8); 
+    height: 80px; 
+}
+ */
+
+body.dark-mode .hero {
+    padding-top: 180px; 
+}
+
+.auth-container {
+  position: relative;
+}
+
+.auth-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-primary);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.auth-button:hover {
+  background-color: #4547b0;
+}
+
+.dropdown-login-form {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 320px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 24px;
+  z-index: 1000;
+}
+
+.dropdown-login-form h3 {
+  color: var(--color-gray900);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.dropdown-login-form .form-group {
+  margin-bottom: 16px;
+}
+
+.dropdown-login-form .input-wrapper {
+  position: relative;
+}
+
+.dropdown-login-form .input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%; 
+  transform: translateY(-50%);
+  color: var(--color-gray500);
+}
+
+.dropdown-login-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--color-gray300);
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.dropdown-login-form .form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.dropdown-login-form .checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdown-login-form .btn-signin {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.dropdown-login-form .signup-prompt {
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-gray600);
+}
+
+/* Dark mode styles */
+body.dark-mode .dropdown-login-form {
+  background-color: #33354D;
+  border: 1px solid var(--color-gray700);
+}
+
+body.dark.mode .dropdown-login-form h3 {
+  color: white;
+}
+
+body.dark.mode .dropdown-login-form input {
+  background-color: var(--color-gray900);
+  border-color: var(--color-gray700);
+  color: white;
+}
+
+.dropdown-login-form .reset-subtitle {
+  color: var(--color-gray600);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.dropdown-login-form .btn-back {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  background-color: var(--color-gray200);
+  color: var(--color-gray700);
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-login-form .btn-back:hover {
+  background-color: var(--color-gray300);
+}
+
+.dropdown-form-wrapper {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding-top: 8px;
+  z-index: 1000;
+}
+
+body.dark-mode .dropdown-login-form .reset-subtitle {
+  color: var(--color-gray400);
+}
+
+body.dark.mode .dropdown-login-form .btn-back {
+  background-color: var(--color-gray700);
+  color: var(--color-gray300);
+}
+
+body.dark.mode .dropdown-login-form .btn-back:hover {
+  background-color: var(--color-gray600);
+}
+
+.btn-text {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.btn-text:hover {
+  color: var(--color-primary-dark);
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-gray500);
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.form-subtitle {
+  color: var(--color-gray600);
+  font-size: 14px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.dropdown-login-form {
+  padding: 24px;
+  min-width: 320px;
+}
+
+.dropdown-login-form h3 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.form-group .input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-gray500);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 16px 12px 44px;
+  border: 1px solid var(--color-gray300);
+  border-radius: 8px;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.btn-signin {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--color-primary);
+  color: white;
+  border: none; 
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.btn-signin:hover {
+  background-color: var(--color-primary-dark);
+}

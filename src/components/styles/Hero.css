@@ -1,0 +1,231 @@
+/* Hero Section */
+.hero {
+    background: radial-gradient(120.91% 118.4% at 50% 100%, rgba(99, 102, 241, 0.10) 0%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.07) 82.52%);
+    padding-top: 170px; /* Increased from 160px to 200px */
+    padding-bottom: 30px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Dark mode override for hero background */
+body.dark-mode .hero {
+    background: radial-gradient(120.91% 118.4% at 50% 100%, rgba(99, 102, 241, 0.20) 0%, rgba(218, 70, 239, 0.10) 41.83%, rgba(18, 18, 18, 0.15) 82.52%);
+    padding-top: 170px; /* Add this line to match the light mode padding */
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    position: relative;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 580px;
+    z-index: 1;
+    height: 100%;
+}
+
+.hero-content h1 {
+    color: var(--color-gray900);
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+.hero-content p {
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+    font-size: 18px;
+    color: var(--color-gray700);
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 140px;
+}
+
+.app-buttons a {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.app-buttons img {
+    height: 52px;
+    width: auto;
+}
+
+.app-buttons a:hover {
+    transform: translateY(-4px);
+}
+
+.discover-more {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--color-gray700);
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+.dark-mode .arrow-button {
+    background: rgba(255, 255, 255, 0.1);
+
+}
+
+.dark-mode .arrow-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}   
+
+.arrow-button {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.arrow-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.arrow-button svg {
+    width: 24px;
+    height: 24px;
+}
+
+.hero-image {
+    flex: 1;
+    position: relative;
+    min-height: 600px;
+
+}
+
+.hero-image img {
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 130%;
+    height: auto;
+    max-width: none;
+}
+
+@media (max-width: 1400px) {
+    .hero-image img {
+        right: 0;
+        width: 120%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-image img {
+        right: 0;
+        width: 110%;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 60px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .app-buttons {
+        justify-content: center;
+        margin-bottom: 60px;
+    }
+
+    .discover-more {
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .hero-image img {
+        position: relative;
+        right: 0;
+        top: 0;
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .app-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+
+    .hero-image {
+        min-height: 300px;
+    }
+
+    .arrow-button {
+        width: 48px;
+        height: 48px;
+    }
+
+    .arrow-button svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.arrow-button-dark {
+    background-color: transparent;
+
+}
+
+.arrow-button-dark:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}

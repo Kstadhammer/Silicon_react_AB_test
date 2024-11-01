@@ -1,0 +1,188 @@
+/* Newsletter Section Container */
+.newsletter-container {
+    background: linear-gradient(to bottom, var(--color-gray100-light) 0%, var(--color-gray100-light) 50%, var(--color-background) 50%, var(--color-background) 100%);
+    padding: 40px 0;
+}
+
+/* Dark mode override for the container */
+body.dark-mode .newsletter-container {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.04) 50%, var(--color-background-dark) 50%, var(--color-background-dark) 100%);
+}
+
+/* Existing newsletter styles */
+.newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 7rem;
+    border-radius: 1rem;
+    background: var(--Gray-100, #F3F6FF);
+    width: 1280px;
+    gap: 2rem;
+    margin: 0 auto; /* Add this to center the newsletter section */
+    height: 215px;
+}
+
+/* Dark mode override for the newsletter content */
+body.dark-mode .newsletter {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.newsletter img {
+    width: 60px;
+    height: 60px;
+}
+
+.newsletter h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-gray900);
+    max-width: 416px;
+    margin-right: 2rem;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter .input-group {
+    display: flex;
+    width: 100%;
+    gap: 0; /* Ensure no gap between input and button */
+}
+
+.newsletter .input-wrapper {
+    position: relative;
+    flex-grow: 1;
+}
+
+.newsletter .input-wrapper i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-gray);
+}
+
+.dark-mode .newsletter input[type="email"] {
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.02);
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.newsletter input[type="email"] {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    border: 1px solid var(--color-gray300);
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    font-size: 16px;
+    color: var(--color-gray500-light);
+    height: 52px;
+    background-color: var(--color-white);
+    margin: 0; /* Remove any margin */
+}
+
+.newsletter .btn-primary-1 {
+    width: 142px;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border: none;
+    background-color: var(--color-primary);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-white);
+    height: 52px;
+    cursor: pointer;
+    margin: 0; /* Remove any margin */
+}
+
+/* Dark mode override for the subscribe button text */
+body.dark-mode .newsletter .btn-primary-1 {
+    background-color: var(--color-primary);
+    color: var(--color-subscribe-button-dark) !important;
+}
+
+body.dark-mode .newsletter .btn-primary-1:hover {
+    background-color: var(--color-primary-light);
+}
+
+.newsletter .error-text {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 10px;
+    display: block;
+    font-weight: 400;
+    align-self: flex-start;
+    margin-left: 15px;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1400px) {
+    .newsletter {
+        width: 100%;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .newsletter {
+        flex-direction: column;
+        padding: 2rem;
+        width: 100%;
+        height: auto;
+    }
+
+    .newsletter h2 {
+        margin-right: 0;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .newsletter .input-group {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .newsletter input[type="email"] {
+        border-radius: 0.5rem;
+    }
+
+    .newsletter .btn-primary-1 {
+        width: 100%;
+        border-radius: 0.5rem;
+    }
+}
+
+.bounce-animation {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}

@@ -1,0 +1,52 @@
+/* Footer Section */
+.footer {
+    width: 100%;
+    background-color: var(--color-background);
+    padding: 3.5rem 0;
+    text-align: center;
+}
+
+/* White footer variant */
+.footer-white {
+    background-color: #FFFFFF !important;
+}
+
+/* Contact page footer override */
+.contact-page-active .footer {
+    background-color: #FFFFFF !important;
+}
+
+/* Dark mode contact page footer override */
+body.dark-mode .contact-page-active .footer {
+    background: transparent !important;
+}
+
+body.dark-mode .contact-page-active .footer-content {
+    color: var(--color-gray700-light) !important;
+}
+
+.footer .container {
+    max-width: 1296px;
+    margin: 0 auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--color-gray600);
+    line-height: 160%;
+    margin: 0;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem 0;
+    }
+}
