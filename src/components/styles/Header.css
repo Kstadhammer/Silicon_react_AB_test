@@ -188,7 +188,7 @@ header .container {
 
 @media (max-width: 1199px) {
     header .container {
-        gap: 24px;
+        gap: 8px;
     }
 
     .navbar {
@@ -198,8 +198,21 @@ header .container {
     .auth-container {
         display: none;
     }
-}
 
+    .logo {
+        order: 1;
+    }
+
+    .btn-toggle-switch {
+        order: 2;
+        margin-left: auto;
+    }
+
+    .btn-mobile {
+        order: 3;
+        margin-left: 8px;
+    }
+}
 
 @media (max-width: 767px) {
     header {
@@ -207,7 +220,7 @@ header .container {
     }
 
     header .container {
-        gap: 16px;
+        gap: 8px;
     }
 
     .logo img {
