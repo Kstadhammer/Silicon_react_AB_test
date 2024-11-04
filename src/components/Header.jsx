@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faUser, faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types'; 
 import './styles/Header.css';
+import MobileMenu from './MobileMenu';
 
 const Header = ({ isDarkMode, toggleDarkMode }) => {
   const [showLoginForm, setShowLoginForm] = useState(false);
@@ -19,6 +20,7 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
   });
   const [forgotEmail, setForgotEmail] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     if (showLoginForm) {
@@ -76,6 +78,11 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
     setShowLoginForm(true);
     setShowSignUpForm(false);
     setShowForgotPassword(false);
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+    setShowLoginForm(false);
   };
 
   return (
@@ -303,9 +310,15 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
             </div>
           )}
         </div>
-        <button className="btn-mobile">
+        <button className="btn-mobile" onClick={toggleMobileMenu}>
           <FontAwesomeIcon icon={faBars} />
         </button>
+
+        <MobileMenu 
+          isOpen={isMobileMenuOpen}
+          onClose={() => setIsMobileMenuOpen(false)}
+          onAuthClick={handleAuthButtonClick}
+        />
       </div>
     </header>
   );

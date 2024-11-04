@@ -194,6 +194,7 @@ header .container {
     .navbar {
         display: none;
     }
+
 }
 
 @media (max-width: 767px) {
@@ -456,53 +457,4 @@ body.dark.mode .dropdown-login-form .btn-back:hover {
 
 .btn-signin:hover {
   background-color: var(--color-primary-dark);
-}
-
-.mobile-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background-color: var(--color-white);
-  padding: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transform: translateY(-100%);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 1000;
-}
-
-.mobile-menu.active {
-  transform: translateY(0);
-  opacity: 1;
-  visibility: visible;
-}
-
-.dark-mode .mobile-menu {
-  background-color: var(--color-gray300-dark);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.mobile-menu .nav-links {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.mobile-menu .nav-link {
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--color-gray900);
-  padding: 8px 0;
-}
-
-.dark-mode .mobile-menu .nav-link {
-  color: var(--color-gray700-dark);
-}
-
-.mobile-menu .auth-button {
-  width: 100%;
-  margin-top: 16px;
-  justify-content: center;
 }
