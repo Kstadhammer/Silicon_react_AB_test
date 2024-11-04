@@ -153,59 +153,78 @@
 
 @media (max-width: 991px) {
     .steps {
-        max-width: 600px;
+        max-width: 700px;
+        gap: 60px;
     }
 
     .carousel-image {
-        width: 250px;
-        height: 592px;
+        width: 280px;
+        height: 664px;
     }
 
     .step {
-        width: 250px;
+        width: 280px;
     }
 }
 
 @media (max-width: 768px) {
     .how-it-works {
-        padding: 60px 0;
+        padding: 40px 0;
     }
 
     .how-it-works h2 {
-        font-size: 32px;
-        margin-bottom: 40px;
+        font-size: 28px;
+        margin-bottom: 30px;
     }
 
     .steps {
-        max-width: calc(100% - 100px);
+        max-width: calc(100% - 80px);
+        gap: 40px;
     }
 
-    .carousel-image {
-        width: 200px;
-        height: 474px;
+    .carousel {
+        gap: 10px;
     }
 
-    .step {
-        width: 200px;
-    }
-
-    .transaction-history h3 {
-        font-size: 20px;
+    .transaction-history {
+        padding: 0 15px;
     }
 }
 
 @media (max-width: 480px) {
+    .how-it-works h2 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
     .carousel-image {
-        width: 160px;
-        height: 379px;
+        width: 140px;
+        height: 332px;
     }
 
     .step {
-        width: 160px;
+        width: 140px;
+    }
+
+    .steps {
+        max-width: calc(100% - 60px);
+        gap: 20px;
     }
 
     .nav-button {
-        width: 32px;
-        height: 32px;
+        width: 28px;
+        height: 28px;
+    }
+
+    .chevron-icon {
+        font-size: 12px;
+    }
+
+    .transaction-history h3 {
+        font-size: 18px;
+    }
+
+    .transaction-history p {
+        font-size: 14px;
     }
 }
