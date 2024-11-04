@@ -172,7 +172,7 @@ header .container {
     }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
     .navbar {
         display: block;
     }
@@ -186,7 +186,7 @@ header .container {
     }
 }
 
-@media (max-width: 1399px) {
+@media (max-width: 1199px) {
     header .container {
         gap: 24px;
     }
@@ -195,7 +195,11 @@ header .container {
         display: none;
     }
 
+    .auth-container {
+        display: none;
+    }
 }
+
 
 @media (max-width: 767px) {
     header {

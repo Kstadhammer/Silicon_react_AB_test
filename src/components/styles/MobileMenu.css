@@ -75,7 +75,7 @@
   background-color: #4547b0;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1200px) {
   .mobile-menu {
     display: none;
   }
